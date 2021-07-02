@@ -6,9 +6,9 @@
   Properties for Gaming.*.x64
   ****************************************************************************************************
   -->
-  <PropertyGroup Condition="'$(GDKUseBWOI)' == 'true'">
-    <DurangoXdkInstallPath>$(GameDK)</DurangoXdkInstallPath>
-    <GamingWindowsSDKDir>$(GameDKLatest)WindowsSDK\</GamingWindowsSDKDir>
+  <PropertyGroup Condition="'$(GDKUseBWOI)' == 'true' and '$(VisualStudioVersion)' == '15.0'">
+    <DurangoXdkInstallPath>$(GDKVAR_GameDK)</DurangoXdkInstallPath>
+    <GamingWindowsSDKDir>$(GDKVAR_GameDKLatest)WindowsSDK\</GamingWindowsSDKDir>
   </PropertyGroup>
 
   <!--
@@ -17,19 +17,19 @@
   ****************************************************************************************************
   -->
   <PropertyGroup Condition="'$(GDKUseBWOI)' == 'true' and ('$(Platform)' == 'Gaming.Xbox.XboxOne.x64' and '$(VisualStudioVersion)' == '15.0')">
-    <_PlatformFolder>$(GameDKLatest)GXDK\VS2017\flatDeployment\Common7\IDE\VC\VCTargets\Platforms\$(Platform)\</_PlatformFolder>
+    <_PlatformFolder>$(GDKVAR_GameDKLatest)GXDK\VS2017\flatDeployment\Common7\IDE\VC\VCTargets\Platforms\$(Platform)\</_PlatformFolder>
     <DefaultXdkEditionRootVS2017>$(_PlatformFolder)</DefaultXdkEditionRootVS2017>
     <XdkEditionRootVS2017>$(_PlatformFolder)</XdkEditionRootVS2017>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(GDKUseBWOI)' == 'true' and ('$(Platform)' == 'Gaming.Xbox.Scarlett.x64' and '$(VisualStudioVersion)' == '15.0')">
-    <_PlatformFolder>$(GameDKLatest)GXDK\VS2017\flatDeployment\Common7\IDE\VC\VCTargets\Platforms\$(Platform)\</_PlatformFolder>
+    <_PlatformFolder>$(GDKVAR_GameDKLatest)GXDK\VS2017\flatDeployment\Common7\IDE\VC\VCTargets\Platforms\$(Platform)\</_PlatformFolder>
     <DefaultXdkEditionRootVS2017>$(_PlatformFolder)</DefaultXdkEditionRootVS2017>
     <XdkEditionRootVS2017>$(_PlatformFolder)</XdkEditionRootVS2017>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(GDKUseBWOI)' == 'true' and ('$(Platform)' == 'Gaming.Desktop.x64' and '$(VisualStudioVersion)' == '15.0')">
-    <_PlatformFolder>$(GameDKLatest)GRDK\VS2017\flatDeployment\Common7\IDE\VC\VCTargets\Platforms\$(Platform)\</_PlatformFolder>
+    <_PlatformFolder>$(GDKVAR_GameDKLatest)GRDK\VS2017\flatDeployment\Common7\IDE\VC\VCTargets\Platforms\$(Platform)\</_PlatformFolder>
     <DefaultXdkEditionRootVS2017>$(_PlatformFolder)</DefaultXdkEditionRootVS2017>
     <XdkEditionRootVS2017>$(_PlatformFolder)</XdkEditionRootVS2017>
   </PropertyGroup>
@@ -47,8 +47,8 @@
   ****************************************************************************************************
   -->
   <PropertyGroup Condition="'$(GDKUseBWOI)' == 'true'">
-    <_AlternativeVCTargetsPath160>$(GDKVAR_GDKMSBuildForVS2019)v160\</_AlternativeVCTargetsPath160>
-    <_AlternativeVCTargetsPath150>$(GDKVAR_GDKMSBuildForVS2019)v150\</_AlternativeVCTargetsPath150>
+    <_AlternativeVCTargetsPath160>$(GDKVAR_GDKMSBuildForVS)v160\</_AlternativeVCTargetsPath160>
+    <_AlternativeVCTargetsPath150>$(GDKVAR_GDKMSBuildForVS)v150\</_AlternativeVCTargetsPath150>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(GDKUseBWOI)' == 'true' and ('$(Platform)' == 'Gaming.Xbox.XboxOne.x64' and '$(VisualStudioVersion)' == '16.0')">
