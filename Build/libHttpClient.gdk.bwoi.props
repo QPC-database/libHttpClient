@@ -47,8 +47,8 @@
   ****************************************************************************************************
   -->
   <PropertyGroup Condition="'$(GDKUseBWOI)' == 'true'">
-    <_AlternativeVCTargetsPath160>$(GDKMSBuildForVS2019)v160\</_AlternativeVCTargetsPath160>
-    <_AlternativeVCTargetsPath150>$(GDKMSBuildForVS2019)v150\</_AlternativeVCTargetsPath150>
+    <_AlternativeVCTargetsPath160>$(GDKVAR_GDKMSBuildForVS2019)v160\</_AlternativeVCTargetsPath160>
+    <_AlternativeVCTargetsPath150>$(GDKVAR_GDKMSBuildForVS2019)v150\</_AlternativeVCTargetsPath150>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(GDKUseBWOI)' == 'true' and ('$(Platform)' == 'Gaming.Xbox.XboxOne.x64' and '$(VisualStudioVersion)' == '16.0')">
